@@ -12,12 +12,18 @@ class AddressBook(object):
     def add_person(self, person):
         self.book.append(person)
         save_to_file(self.book, BOOK_FILE)
-        
+
     def delete_person(self, name):
-        raise NotImplementedError
+        for i, person in enumerate(self.book):
+            if person["name"] == name:
+                del self.book[i]
+        save_to_file(self.book, BOOK_FILE)
     
-    def search(self, name):
+    def search_exact(self, name):
         for person in self.book:
             if person["name"] == name:
                 return person
         return None
+
+    def search_part(self, query):
+        return [person for person in self.book if query.lower() in person["name"].lower()]
