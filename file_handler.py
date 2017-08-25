@@ -1,12 +1,14 @@
-from config import BOOK_FILE
-import json
+import csv
 
-def open_from_file():
-    with open(BOOK_FILE, 'r') as file:
-        return json.load(file)
+def yield_dicts_from_file(path):
+    with open(path, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            yield row
 
-def save_to_file(list):
-    json_string = json.dumps(list, indent=4)
-    print(json_string)
-    with open(BOOK_FILE, 'w') as file:
-        file.write(json_string)
+def save_to_file(list, path):
+    with open(path, 'w') as file:
+        writer = csv.DictWriter(file, fieldnames=['name', 'phone', 'birthday'])
+        writer.writeheader()
+        for person in list:
+            writer.writerow(person)

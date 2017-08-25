@@ -1,1 +1,1 @@
-BOOK_FILE = './book.json'
+BOOK_FILE = './book.csv'
