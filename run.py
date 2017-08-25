@@ -1,6 +1,9 @@
 import json
 from address_book import AddressBook
 
+def print_person(person):
+    print '{name:<30}\t{phone:<20}\t{birthday:<20}'.format(**person)
+
 available_commands = ['list', 'add', 'delete', 'search', 'exit']
 
 book = AddressBook()
@@ -16,7 +19,7 @@ while True:
     else:
         if command == "list":
             for person in book.get_list():
-                print '{name:<30}\t{phone:<20}\t{birthday:<20}'.format(**person)
+                print_person(person)
         
         if command == "add":
             print("Please add the info below")            
@@ -25,8 +28,12 @@ while True:
                 "phone":raw_input("Phone: "),
                 "birthday":raw_input("Date of birth: ")
             }
-            book.add_person(person)
-            
+            searched_person = book.search(person["name"])
+            if searched_person is None:
+                book.add_person(person)
+            else:
+                print "You have the '{name}' in your book already. He's info below:".format(**person)
+                print_person(searched_person)
 
         # if command == "delete":
         #     name = raw_input("Enter the name of the person you want to delete: ")
