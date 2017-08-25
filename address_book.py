@@ -1,6 +1,5 @@
 from config import BOOK_FILE
 from file_handler import get_list_from_file, save_to_file
-from person import Person
 
 class AddressBook(object):
     def __init__(self):
