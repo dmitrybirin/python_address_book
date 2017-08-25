@@ -1,4 +1,4 @@
-import json
+import sys
 from address_book import AddressBook
 
 def print_person(person):
@@ -52,4 +52,4 @@ while True:
                     print_person(person)
 
         if command == 'exit':
-            break
+            sys.exit(0)
