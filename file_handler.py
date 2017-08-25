@@ -1,10 +1,12 @@
 import csv
 
-def yield_dicts_from_file(path):
+def get_list_from_file(path):
     with open(path, 'r') as file:
         reader = csv.DictReader(file)
+        list = []
         for row in reader:
-            yield row
+            list.append(row)
+        return list
 
 def save_to_file(list, path):
     with open(path, 'w') as file:

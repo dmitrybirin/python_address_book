@@ -1,25 +1,23 @@
-from file_handler import yield_dicts_from_file, save_to_file
+from config import BOOK_FILE
+from file_handler import get_list_from_file, save_to_file
 from person import Person
 
 class AddressBook(object):
     def __init__(self):
-        self.book = []
-
-    def load_file(self, file_path):
-        for person in yield_dicts_from_file(file_path):
-            self.book.append(person)
-
-    def save_file(self, file_path):
-        save_to_file(self.book, file_path)
+        self.book = get_list_from_file(BOOK_FILE)
 
     def get_list(self):
         return self.book
 
     def add_person(self, person):
         self.book.append(person)
+        save_to_file(self.book, BOOK_FILE)
         
     def delete_person(self, name):
         raise NotImplementedError
     
-    def search(self, query):
-        raise NotImplementedError
+    def search(self, name):
+        for person in self.book:
+            if person["name"] == name:
+                return person
+        return None
