@@ -23,6 +23,26 @@ Because of lack of time, I've not included tests at the beginning:((
 python run.py
 ```
 
+## Features
+
+You can use the following commands:
+
+### list
+lists the whole address book info
+
+### add
+add new person to the list
+you can't add the person with the same name as already existed
+
+### delete
+delete teh person by exact name
+
+### search
+search the whole book names for the query
+
+### exit
+exit the app
+
 ## What hasn't been done yet
 
 - [ ] Available Commands refactoring, too messy in the run.py
