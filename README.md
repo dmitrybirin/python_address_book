@@ -60,6 +60,7 @@ exit the app
 - [x] Date validation
 - [x] Reminder feature
 - [x] Pep8 for God's sake
+- [ ] Handling file exceptions
 - [ ] Document functions properly
 - [ ] Use Docker for 2.7 if there will be additional modules ?
 - [ ] Replace interactive implementation with the argument one ? 
