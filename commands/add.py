@@ -28,6 +28,7 @@ def add(book):
 
     if searched_person is None:
         book.add_person(person)
+        print "Person added successfully!\n"
     else:
         print_person(searched_person)
         raise AlreadyExistError("You have the '{name}' in your book already. "
