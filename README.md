@@ -9,13 +9,12 @@ Develop standart Adress Book functionality with Python 2.7 with storing the foll
 
 As a plus, develop 'Reminder' feature to remind about friend's birthdays upon run
 
-## Implementation details
+## Implementation details and choices
 
 I've decided to go with the interactive pattern instead of arguments.
 
-I've decided to use csv instead of familiar json, cause it be more easy to implement import/export from customer files in future, for example.
+I've decided to use csv instead of familiar json, cause it be more easy to implement import/export from customer files in future, for example:)
 
-Because of lack of time, I've not included tests at the beginning:((
 
 ## Run
 
@@ -36,9 +35,11 @@ you can't add the person with the same name as already existed
 
 ### delete
 delete teh person by exact name
+you can't delete the person that doesn't exist
 
 ### search
 search the whole book names for the query
+if the query is inside name, it will be in the reult list
 
 ### exit
 exit the app
@@ -48,6 +49,4 @@ exit the app
 - [x] Commands refactoring, too messy in the run.py
 - [x] Date validation
 - [x] Reminder feature
-- [ ] Unit Tests
-- [ ] Save To Disk option for the changing commands
-- [ ] Pep8 for God's sake
+- [x] Pep8 for God's sake
