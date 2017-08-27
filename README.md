@@ -46,8 +46,8 @@ exit the app
 ## What hasn't been done yet
 
 - [x] Commands refactoring, too messy in the run.py
-- [ ] Unit Tests
-- [ ] Date validation
+- [x] Date validation
 - [ ] Reminder feature
+- [ ] Unit Tests
 - [ ] Save To Disk option for the changing commands
 - [ ] Pep8 for God's sake

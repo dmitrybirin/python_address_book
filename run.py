@@ -1,5 +1,6 @@
 from address_book import AddressBook
 from commands import list, add, delete, search, exit
+from errors import NotExistError, AlreadyExistError, ValidationError
 
 available_commands = {  'list': list,
                         'add': add,
@@ -18,4 +19,7 @@ while True:
     if command not in available_commands.keys():
         print "I don\'t understand your command. Sorry!\n"
     else:
-        available_commands[command](book)
+        try:
+            available_commands[command](book)
+        except (NotExistError, AlreadyExistError, ValidationError) as e:
+            print(e)
