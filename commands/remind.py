@@ -22,13 +22,13 @@ def remind(book):
                                   .format(**person))
         
     if len(persons_to_remind_of) > 0:
-        print "The following persons are celebrating birthday "
-        "in the next {days} days".format(days=DAYS_TO_REMIND)
+        print "The following persons are celebrating birthday " \
+            "in the next {days} days".format(days=DAYS_TO_REMIND)
         
         for person in persons_to_remind_of:
             print_person(person)
 
     else:
-        print "There is nobody celebrating birthday in {days} days. "
-        "Call parents!".format(days=DAYS_TO_REMIND)
+        print "There is nobody celebrating birthday in {days} days. " \
+            "Call parents!".format(days=DAYS_TO_REMIND)
     
