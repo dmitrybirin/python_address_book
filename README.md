@@ -15,6 +15,16 @@ I've decided to go with the interactive pattern instead of arguments.
 
 I've decided to use csv instead of familiar json, cause it be more easy to implement import/export from customer files in future, for example:)
 
+## Config Values
+```
+BOOK_FILE 
+```
+The address book in csv format. Default to './book.csv'
+
+```
+DAYS_TO_REMIND
+```
+Days in the future to remind about birthdays. Default is 7
 
 ## Run
 
@@ -50,3 +60,6 @@ exit the app
 - [x] Date validation
 - [x] Reminder feature
 - [x] Pep8 for God's sake
+- [ ] Document functions properly
+- [ ] Use Docker for 2.7 if there will be additional modules ?
+- [ ] Replace interactive implementation with the argument one ? 
