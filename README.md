@@ -47,7 +47,7 @@ exit the app
 
 - [x] Commands refactoring, too messy in the run.py
 - [x] Date validation
-- [ ] Reminder feature
+- [x] Reminder feature
 - [ ] Unit Tests
 - [ ] Save To Disk option for the changing commands
 - [ ] Pep8 for God's sake

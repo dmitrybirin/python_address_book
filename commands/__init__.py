@@ -3,3 +3,4 @@ from commands.list import list
 from commands.delete import delete
 from commands.search import search
 from commands.exit import exit
+from commands.remind import remind

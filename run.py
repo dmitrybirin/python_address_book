@@ -1,5 +1,5 @@
 from address_book import AddressBook
-from commands import list, add, delete, search, exit
+from commands import list, add, delete, search, exit, remind
 from errors import NotExistError, AlreadyExistError, ValidationError
 
 available_commands = {  'list': list,
@@ -11,6 +11,7 @@ available_commands = {  'list': list,
 book = AddressBook()
 
 print "Hello, this is your address book!"
+remind(book)
 print "Enter the one of commands below"
 
 while True:
