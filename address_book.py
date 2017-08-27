@@ -1,6 +1,7 @@
 from config import BOOK_FILE
 from file_handler import get_list_from_file, save_to_file
 
+
 class AddressBook(object):
     def __init__(self):
         self.book = get_list_from_file(BOOK_FILE)
@@ -10,7 +11,6 @@ class AddressBook(object):
 
     def add_person(self, person):
         self.book.append(person)
-        save_to_file(self.book, BOOK_FILE)
 
     def delete_person(self, name):
         for i, person in enumerate(self.book):
@@ -25,4 +25,5 @@ class AddressBook(object):
         return None
 
     def search_part(self, query):
-        return [person for person in self.book if query.lower() in person["name"].lower()]
+        return [person for person
+                in self.book if query.lower() in person["name"].lower()]

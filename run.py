@@ -2,11 +2,11 @@ from address_book import AddressBook
 from commands import list, add, delete, search, exit, remind
 from errors import NotExistError, AlreadyExistError, ValidationError
 
-available_commands = {  'list': list,
-                        'add': add,
-                        'delete': delete,
-                        'search': search,
-                        'exit': exit }
+available_commands = {'list': list,
+                      'add': add,
+                      'delete': delete,
+                      'search': search,
+                      'exit': exit}
 
 book = AddressBook()
 
