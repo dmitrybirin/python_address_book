@@ -25,10 +25,10 @@ def add(book):
     }
 
     searched_person = book.search_exact(name)
-    
+
     if searched_person is None:
         book.add_person(person)
     else:
         print_person(searched_person)
         raise AlreadyExistError("You have the '{name}' in your book already. "
-                                "He's info above:".format(**person))
+                                "He's info above.".format(**person))
