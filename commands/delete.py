@@ -8,5 +8,5 @@ def delete(book):
                             .format(name=name))
     else:
         book.delete_person(name)
-        print "Person deleted successfully!\n"
+        print "Person '{name}' deleted successfully!\n".format(name=name)
         
