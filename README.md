@@ -45,7 +45,7 @@ exit the app
 
 ## What hasn't been done yet
 
-- [ ] Available Commands refactoring, too messy in the run.py
+- [x] Commands refactoring, too messy in the run.py
 - [ ] Unit Tests
 - [ ] Date validation
 - [ ] Reminder feature
